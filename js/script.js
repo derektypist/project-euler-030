@@ -9,7 +9,7 @@ function getNumberInfo() {
         txt += `Invalid Input.  Please enter a whole number between 2 and 6.`;
     } else {
         txt += `You have entered the number ${num}. <p>`; 
-        txt += `Sum of the numbers written to the ${num} powers `;
+        txt += `Sum of the numbers written to the ${num} powers id ${digitnPowers(num)}.`;
       
     }
     
