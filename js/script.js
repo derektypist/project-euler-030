@@ -35,7 +35,17 @@ function digitnPowers(n) {
     '3': 3**n,
     '4': 4**n,
     '5': 5**n,
+    '6': 6**n,
+    '7': 7**n,
+    '8': 8**n,
+    '9': 9**n
    };
+
+   for (let c=10;c<(n+1)*9**n;c++) {
+    if (String(c).split("").map(c => powRef[c]).reduce((num,sum) => num + sum,0) === c) powerSums.push(c);
+   }
+
+   return powerSums.reduce((num,sum) => num + sum, 0)
 }
 
 // Function to Clear Information
