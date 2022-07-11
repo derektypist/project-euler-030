@@ -14,3 +14,32 @@ function getNumberInfo() {
     // Display Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
+
+/*
+    Function to find the sum of all the numbers that can be written as the sum
+    of nth powers of their digits
+    digitnPowers(2) returns 0
+    digitnPowers(3) returns 1301
+    digitnPowers(4) returns 19316
+    digitnPowers(5) returns 443839
+*/
+function digitnPowers(n) {
+    const POWERS = Array(10).fill(0).map((_,index) => index**n);
+    function isPowerSum(num) {
+        let sum = 0;
+        let staysUnder = num.toString().split('').every(digit => {
+            sum += POWERS[digit];
+            return sum<=num;
+        });
+
+        return staysUnder && (sum === num);
+    }
+
+    const minVal = 2**n;
+    const maxVal = 9**(n+1);
+    let sum = 0;
+    for (let i=minVal;i<maxVal;i++) {
+        if (isPowerSum(i)) sum += i;
+    }
+    return sum;
+}
