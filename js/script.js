@@ -27,14 +27,15 @@ function getNumberInfo() {
 */
 
 function digitnPowers(n) {
-   let can = [];
-   let maxS = '9'.repeat(n+1);
-   let max = parseInt(maxS);
-   for (let i=2;i<max + 1;i++) {
-    let digitPowerSum = i.toString().split("").map(j => parseInt(j)).reduce((sum,d) => sum + (d**n),0);
-    if (digitPowerSum == i) can.push(i);
-   }
-   return can.reduce((s,i) => s + i, 0);
+   const powerSums = [];
+   let powRef = {
+    '0' : 0,
+    '1' : 1,
+    '2': 2**n,
+    '3': 3**n,
+    '4': 4**n,
+    '5': 5**n,
+   };
 }
 
 // Function to Clear Information
