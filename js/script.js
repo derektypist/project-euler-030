@@ -11,6 +11,7 @@ function getNumberInfo() {
         txt += `You have entered the number ${num}. <p>`;
         txt += `Sum of all the numbers that can be written as the sum of ${num}powers of their digits is ${digitnPowers(num)}.`;
     }
+    
     // Display Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
