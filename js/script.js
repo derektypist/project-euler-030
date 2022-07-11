@@ -10,7 +10,7 @@ function getNumberInfo() {
     } else {
         txt += `You have entered the number ${num}. <p>`;
         const POWERS = Array(10).fill(0).map((_,index) => index**num);     
-        txt += `Sum of the numbers is ${digitnPowers(num)}.`;
+        txt += `Sum of the numbers is ${isPowerSum(num)}.`;
       
     }
     
