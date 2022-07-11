@@ -63,7 +63,7 @@ Deployed on [GitHub Pages](https://derektypist.github.io/project-euler-030) at t
 
 ### Content
 
-Written by me.
+Written by me, though code taken inside the `digitnPowers(n)` function was taken from TORTO21 in the thread for Problem 30 in the Project Euler Forum.  This was accessed on 11 July 2022.
 
 ### Acknowledgements
 
