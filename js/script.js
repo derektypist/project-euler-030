@@ -9,7 +9,7 @@ function getNumberInfo() {
         txt += `Invalid Input.  Please enter a whole number between 2 and 6.`;
     } else {
         txt += `You have entered the number ${num}. <p>`; 
-        txt += `Sum of the numbers is ${digitnPowers(num)}.`;
+        txt += `Sum of the numbers written to the ${num} powers `;
       
     }
     
@@ -30,7 +30,7 @@ function digitnPowers(n) {
    let can = [];
    let maxS = '9'.repeat(n+1);
    let max = parseInt(maxS);
-   for (let i=2;i<max;i++) {
+   for (let i=2;i<max + 1;i++) {
     let digitPowerSum = i.toString().split("").map(j => parseInt(j)).reduce((sum,d) => sum + (d**n),0);
     if (digitPowerSum == i) can.push(i);
    }
