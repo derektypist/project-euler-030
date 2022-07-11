@@ -8,7 +8,8 @@ function getNumberInfo() {
     if (isNaN(num) || num.toString().length == 0 || num<2 || num>6 || !Number.isInteger(Number(num))) {
         txt += `Invalid Input.  Please enter a whole number between 2 and 6.`;
     } else {
-        txt += `You have entered the number ${num}. <p>`;     
+        txt += `You have entered the number ${num}. <p>`;
+        const POWERS = Array(10).fill(0).map((_,index) => index**num);     
         txt += `Sum of the numbers is .`;
       
     }
@@ -17,6 +18,18 @@ function getNumberInfo() {
     document.getElementById("numinfo").innerHTML = txt;
 }
 
+/*
+    Function to check if the digits in num have a sum equal to num
+*/
+function isPowerSum(num) {
+    let sum = 0;
+    let staysUnder = num.toString().split("").every((digit) => {
+        sum += POWERS[digit];
+        return sum<=num;
+    });
+
+    return staysUnder && (sum===num);
+}
 
 /*
     Function to find the sum of all the numbers that can be written as the sum
@@ -29,17 +42,7 @@ function getNumberInfo() {
 
 
 function digitnPowers(n) {
-    const POWERS = Array(10).fill(0).map((_,index) => index**n);
-    function isPowerSum(num) {
-        let sum = 0;
-        let staysUnder = num.toString().split("").every(digit => {
-            sum += POWERS[digit];
-            return sum<=num;
-        });
-
-        return staysUnder && (sum === num);
-    }
-
+   
     const minVal = 2**n;
     const maxVal = 9**(n+1);
     let sum = 0;
