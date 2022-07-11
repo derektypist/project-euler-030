@@ -40,3 +40,10 @@ The function `digitnPowers(n)` returns a number, where `n` is number between 2 a
 
 Allows the user to enter a number, as well as getting the sum of all the numbers that can be written as the sum of nth powers of their digits.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.
 
+## Technologies
+
+Technologies include HTML5, CSS3, JavaScript, Bootstrap 5.2.0-Beta1 and Google Fonts.
+
+## Testing
+
+Ensure all user stories have been met.
