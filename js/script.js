@@ -9,6 +9,7 @@ function getNumberInfo() {
         txt += `Invalid Input.  Please enter a whole number between 2 and 6.`;
     } else {
         txt += `You have entered the number ${num}. <p>`;
+        const POWERS = Array(10).fill(0).map((_,index) => index**num);
         txt += `Sum of the numbers in ${digitnPowers(num)}`;
       
     }
@@ -25,8 +26,10 @@ function getNumberInfo() {
     digitnPowers(4) returns 19316
     digitnPowers(5) returns 443839
 */
+
+
 function digitnPowers(n) {
-    const POWERS = Array(10).fill(0).map((_,index) => index**n);
+   
     function isPowerSum(num) {
         let sum = 0;
         let staysUnder = num.toString().split('').every(digit => {
