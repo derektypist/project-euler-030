@@ -22,6 +22,13 @@ Enter a whole number, between 2 and 6 in the input field and click on the Submit
 
 **User Stories**
 
+As a user, I expect to get an error message, if I do any of:
+
+- Not enter anything in the input field
+- Entering text other than a number
+- Entering a number less than 2 or greater than 6
+- Entering a number, but it is not an integer
+
 As a user, I expect the function `digitnPowers(2)` to return a number.
 
 As a user, I expect the function `digitnPowers(2)` to return 0.
